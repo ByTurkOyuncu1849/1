@@ -1,0 +1,26 @@
+import random
+
+print("Merhaba! Benim adım Python. Senin adın ne?")
+
+myName = input()
+
+number = random.randint(1, 20)
+
+print("Tamam " + myName + ", ben bir sayı tuttum 1 ile 20 arasında.")
+
+for guessesTaken in range(1, 7):
+    print("Tahmin et bakalım.")
+    guess = int(input())
+
+    if guess < number:
+        print("Tuttuğum sayı daha büyük.")
+    elif guess > number:
+        print("Tuttuğum sayı daha küçük.")
+    else:
+        break
+
+if guess == number:
+    print("Harika " + myName + "! " + str(guessesTaken) + " tahminde doğru bildin!")
+else:
+    print("Üzgünüm. Tutulan sayı " + str(number) + " idi.")
+
